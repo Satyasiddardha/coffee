@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/sign_in.css">
+    <link rel="icon" type="image/x-icon" href="../img/coffeee.ico">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <section class="wrapper">
+                <div class="heading">
+                    <h1 class="text text-large">Sign In</h1>
+                    <p class="text text-normal">New user? <span><a href="signup.html" class="text text-links">Create an account</a></span>
+                    </p>
+                </div>
+                <form name="signin" class="form" onsubmit="handleSignIn(event)">
+                    <div class="input-control">
+                        <label for="email" class="input-label" hidden>Email Address</label>
+                        <input type="email" name="email" id="email" class="input-field" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-control">
+                        <label for="password" class="input-label" hidden>Password</label>
+                        <input type="password" name="password" id="password" class="input-field" placeholder="Password" required>
+                    </div>
+                    <div class="input-control">
+                        <a href="forgot_pass.html" class="text text-links">Forgot Password</a>
+                        <button type="submit" name="submit" class="input-submit">Sign In</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script>
+        function handleSignIn(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // You can add your own logic here to handle the email and password.
+            // For now, it simply logs them to the console and redirects to the homepage.
+            
+            console.log('Email:', email);
+            console.log('Password:', password);
+            
+            // Redirect to the home page
+            window.location.href = 'coffee_home.html';
+        }
+    </script>
+    <p>
+    <div class="company-details">
+        <p style="color: white">&copy; 2023 Coffee & Tea Delights | Contribution: Rushyendra Reddy B, Satya Siddardha V | Phone: +91 8148433551, +91 9494701011
+    </div>
+    </p>
+</body>
+</html>
